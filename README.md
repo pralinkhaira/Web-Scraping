@@ -1,4 +1,5 @@
-# Web Scraping Example
+# Web Scraping 
+
 
 This is a simple example of web scraping using Python and BeautifulSoup. It demonstrates how to extract specific elements from a webpage and print the extracted data.
 
@@ -19,7 +20,7 @@ This is a simple example of web scraping using Python and BeautifulSoup. It demo
 
 ## Usage
 
-1. Open the Python script file `web_scraping_example.py`.
+1. Open the Python script file `web_scraping.py`.
 2. Modify the `url` variable to the target website's URL that you want to scrape.
 3. Run the script using the following command:
 
