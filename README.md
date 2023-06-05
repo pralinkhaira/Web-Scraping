@@ -45,3 +45,13 @@ Please ensure that you comply with the terms of service of the website you are s
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Update Notes
+
+`Version 1.1`
+
+In this updated code:
+- **Error Handling**: The code is wrapped in try-except blocks to handle potential exceptions during the request and parsing processes. If an error occurs, an appropriate error message is printed, and the program exits with a non-zero status code.
+- **User-Agent**: A custom User-Agent header is included in the request to mimic a web browser and enhance compatibility with websites that may block or limit scraping bots.
+- **Robust Element Selection**: Instead of using find() and find_all(), the code now uses select_one() and select() methods with CSS selectors. This provides more robust element selection capabilities. The title is selected using soup.select_one('title'), and paragraphs are selected using soup.select('p').
+- These changes help improve the code's reliability and adaptability to different scenarios. Remember to customize the User-Agent string to suit your needs and comply with the website's terms of service.
