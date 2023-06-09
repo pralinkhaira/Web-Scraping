@@ -49,10 +49,19 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Update Notes
 
-`Version 1.1`
+### Version 1.1
 
 In this updated code:
 - **Error Handling**: The code is wrapped in try-except blocks to handle potential exceptions during the request and parsing processes. If an error occurs, an appropriate error message is printed, and the program exits with a non-zero status code.
 - **User-Agent**: A custom User-Agent header is included in the request to mimic a web browser and enhance compatibility with websites that may block or limit scraping bots.
 - **Robust Element Selection**: Instead of using find() and find_all(), the code now uses select_one() and select() methods with CSS selectors. This provides more robust element selection capabilities. The title is selected using soup.select_one('title'), and paragraphs are selected using soup.select('p').
 - These changes help improve the code's reliability and adaptability to different scenarios. Remember to customize the User-Agent string to suit your needs and comply with the website's terms of service.
+
+### Version 1.2
+
+In this updated code:
+- **Pagination and Iterating Over Multiple Pages**: The code currently assumes scraping data from a single page. To scrape multiple pages, you can modify the URL and repeat the scraping process within a loop. Implement the logic to navigate to the next page and update the URL accordingly.
+- **Data Storage (Example: CSV)**: The extracted data is now stored in a CSV file `scraped_data.csv`. The code opens a file in write mode, creates a CSV writer, writes the header row, and then writes the data rows. You can modify the file name and adjust the data storage format based on your requirements.
+- **Performance Optimization**: The code provided is for a single page scrape. If you need to scrape multiple pages or enhance performance, you can consider implementing techniques like parallel processing or asynchronous scraping using libraries such as concurrent.futures or aiohttp. These techniques allow you to scrape multiple pages concurrently, improving the overall scraping speed.
+- Remember to customize the pagination logic and data storage based on the website's structure and requirements. Additionally, consider handling other potential exceptions, implementing delay between requests to avoid overwhelming the server, and respecting website terms of service and legal restrictions.
+
